@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ResultActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_guideliene"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_guideliene"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/top_guideliene"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottom_guideliene"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.98" />
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/result"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            app:layout_constraintEnd_toEndOf="@id/end_guideliene"
+            app:layout_constraintStart_toStartOf="@id/start_guideliene"
+            app:layout_constraintTop_toTopOf="@id/top_guideliene" />
+
+        <TextView
+            android:id="@+id/see_graph"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@android:color/holo_blue_light"
+            android:textStyle="bold"
+            android:text="@string/click_here_to_see_the_graph"
+            app:layout_constraintTop_toBottomOf="@id/heading"
+            app:layout_constraintStart_toStartOf="@id/start_guideliene"
+            app:layout_constraintEnd_toEndOf="@id/end_guideliene"
+            android:gravity="center_horizontal"/>
+        <ir.androidexception.datatable.DataTable
+            android:id="@+id/result_table"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:header_gravity="center"
+            app:header_text_color="@android:color/black"
+            app:header_vertical_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideliene"
+            app:layout_constraintEnd_toEndOf="@id/end_guideliene"
+            app:layout_constraintStart_toStartOf="@id/start_guideliene"
+            app:layout_constraintTop_toBottomOf="@id/see_graph"
+            app:row_gravity="center"
+            app:row_vertical_margin="8dp" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="heading,result_table,see_graph" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

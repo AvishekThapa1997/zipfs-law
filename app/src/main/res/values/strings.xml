@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Zipf\'sLaw</string>
+    <string name="heading">Word Count Visualiser</string>
+    <string name="enter_text">Enter Text</string>
+    <string name="find_result">find result</string>
+    <string name="clear">clear</string>
+    <string name="result">Result</string>
+    <string name="click_here_to_see_the_graph">Click here to see the graph</string>
+</resources>
